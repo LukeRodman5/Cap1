@@ -1,4 +1,6 @@
 package com.techelevator;
+import java.io.FileNotFoundException;
+
 /**************************************************************************************************************************
 *  This is your Vending Machine Command Line Interface (CLI) class
 *
@@ -25,8 +27,10 @@ public class VendingMachineCLI {
 													    };
 	
 	private Menu vendingMenu;              // Menu object to be used by an instance of this class
-	
-	public VendingMachineCLI(Menu menu) {  // Constructor - user will pas a menu for this class to use
+	private Inventory stuffWeSell;
+		
+	public VendingMachineCLI(Menu menu) throws FileNotFoundException {  // Constructor - user will pas a menu for this class to use
+		this.stuffWeSell = new Inventory();
 		this.vendingMenu = menu;           // Make the Menu the user object passed, our Menu
 	}
 	/**************************************************************************************************************************
@@ -73,7 +77,7 @@ public class VendingMachineCLI {
  * Methods used to perform processing
  ********************************************************************************************************/
 	public void displayItems() {      // static attribute used as method is not associated with specific object instance
-		// Code to display items in Vending Machine
+		stuffWeSell.displayInventory();// Code to display items in Vending Machine
 	}
 	
 	public void purchaseItems() {	 // static attribute used as method is not associated with specific object instance
