@@ -54,15 +54,15 @@ public class Inventory {
 		}
 	}
 
-	public void subtractFromInventory(String slotLocation) {
-		inventoryList.put(slotLocation, inventoryList.get(slotLocation) - 1);
-	}
-
-	public int returnCurrentInventory(String slotLocation) {
-		return inventoryList.get(slotLocation);
-	}
-
-	public Map<String, Integer> returnInventoryMap() {
-		return inventoryList;
-	}
+//	public void subtractFromInventory(String slotLocation) {
+//		inventoryList.put(slotLocation, inventoryList.get(slotLocation) - 1);
+//	}
+//
+//	public int returnCurrentInventory(String slotLocation) {
+//		return inventoryList.get(slotLocation);
+//	}
+//
+//	public Map<String, Integer> returnInventoryMap() {
+//		return inventoryList;
+//	}
 } 
