@@ -26,6 +26,12 @@ public Item(String itemName,double itemPrice,String itemType,int remainingStock)
 	}
 }
 /**
+ * @param remainingStock the remainingStock to set
+ */
+public void setRemainingStock(int remainingStock) {
+	this.remainingStock = remainingStock;
+}
+/**
  * @return the itemName
  */
 public String getItemName() {
