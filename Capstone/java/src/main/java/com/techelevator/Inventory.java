@@ -20,7 +20,7 @@ public class Inventory {
 	private void stocksVendingMachineAtStartup() throws FileNotFoundException {
 
 
-			final int initalStock = 5;
+			final int initialStock = 5;
 			// load the file into the inventory list map
 		File fileToGrabData = new File("vendingmachine.csv");
 		try(Scanner fileData = new Scanner(fileToGrabData)){
@@ -36,7 +36,7 @@ public class Inventory {
 			double itemPrice = Double.parseDouble(theValues[2]);
 			String itemType = theValues[3];
 			// put the variables into an Item object
-			Item anItem = new Item(itemName, itemPrice, itemType, initalStock);
+			Item anItem = new Item(itemName, itemPrice, itemType, initialStock);
 			
 			// adding item to map w/ slotID
 			inventoryList.put(slotID, anItem);
