@@ -9,7 +9,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Map;
 import java.util.Scanner;
-import java.util.Set;
 import java.util.TreeMap;
 
 /**************************************************************************************************************************
@@ -53,7 +52,7 @@ public class VendingMachineCLI {
 	
 	public double totalSales;
 
-	public double getTotalSales() {
+	public double getTotalSales() {							// Getters & Setters
 		return totalSales;
 	}
 	public void setTotalSales(double totalSales) {
@@ -94,7 +93,7 @@ public class VendingMachineCLI {
 	*
 	***************************************************************************************************************************/
 
-	public void run() throws IOException {
+	public void run() throws IOException {			// starts new log each run
 		 File lastLog = new File("./Log.txt");
 		 if (lastLog.exists()){
 		     lastLog.delete();
@@ -200,6 +199,7 @@ public class VendingMachineCLI {
 	
 	
 	private void feedMoney() throws IOException {
+		@SuppressWarnings("resource")
 		Scanner moneyReader = new Scanner(System.in);
 		
 		System.out.println("Please Insert Bills");
@@ -233,6 +233,7 @@ public class VendingMachineCLI {
 	
 	private void selectProduct() throws IOException {
 		displayItems();
+		@SuppressWarnings("resource")
 		Scanner itemSelect = new Scanner(System.in);
 		
 		System.out.println("Enter Item Code: ");
