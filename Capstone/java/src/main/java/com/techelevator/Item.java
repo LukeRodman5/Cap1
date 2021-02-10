@@ -26,11 +26,8 @@ public class Item {
 				this.itemSound 	= "Chew, Chew, Yum!";
 				}
 	}
-<<<<<<< HEAD
-	if(this.itemType.equals("Gum")) {
-		this.itemSound = "Chew, Chew, Yum!";
-	}
-}
+
+
 /**
  * @param remainingStock the remainingStock to set
  */
@@ -68,25 +65,3 @@ public int getRemainingStock() {
 	return remainingStock;
 }
 }
-=======
-	
-	public void setRemainingStock(int remainingStock) {		// @param remainingStock the remainingStock to set
-				this.remainingStock = remainingStock;
-				}
-	public String getItemName() {							// @return the itemName
-				return itemName;
-				}
-	public double getItemPrice(){							// @return the itemPrice
-				return itemPrice;
-				}
-	public String getItemSound(){							// @return the itemSound
-				return itemSound;
-				}
-	public String getItemType() {							// @return the itemType
-				return itemType;
-				}
-	public int getRemainingStock() {						// @return the remainingStock
-	 			return remainingStock;
-	 			}
-}
->>>>>>> e65b0e9de21eb2a6902f1e9184dc852fc10dbfed
