@@ -1,6 +1,5 @@
 package com.techelevator;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -9,7 +8,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Map;
 import java.util.Scanner;
-import java.util.Set;
 import java.util.TreeMap;
 import com.techelevator.view.Menu;
 
@@ -40,7 +38,7 @@ public class VendingMachineCLI {
 	
 	private Menu menu;
 	public VendingMachineCLI(Menu menu) {
-		this.menu = menu;
+		this.setMenu(menu);
 	}
 	
 	
@@ -125,7 +123,7 @@ public class VendingMachineCLI {
 	public void displayItems() {
 		
 		
-		Item anItem = inventoryList.get(itemName);
+		
 		for (Map.Entry<String,Item>loop:inventoryList.entrySet()) {
 			System.out.println(loop.getKey() + "|" + loop.getValue().getItemName() + "|" + loop.getValue().getItemPrice() + "|" + loop.getValue().getItemType() + " Number Left "+ loop.getValue().getRemainingStock());
 			}
@@ -268,5 +266,13 @@ public class VendingMachineCLI {
 					VendingMachineCLI vendingMenu  = new VendingMachineCLI (menu);
 					vendingMenu.run();
 				
+			}
+
+			public Menu getMenu() {
+				return menu;
+			}
+
+			public void setMenu(Menu menu) {
+				this.menu = menu;
 			}
 }
